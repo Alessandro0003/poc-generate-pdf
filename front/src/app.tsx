@@ -11,7 +11,7 @@ export function App() {
       const response = await fetch('http://localhost:3333/app/generate-pdf', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ url: values.url }),
+        body: JSON.stringify(values),
       });
 
       if (!response.ok) {
